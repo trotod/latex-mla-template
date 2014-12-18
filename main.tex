@@ -1,0 +1,42 @@
+% edit your paper info here
+\newcommand{\essaytitle}{A MLA Essay}                              % title of your essay
+\newcommand{\essayauthorfirst}{John}                               % your first name
+\newcommand{\essayauthorlast}{Doe}                                 % your last name
+\newcommand{\essayauthor}{\essayauthorfirst{} \essayauthorlast{}}  % don't edit
+\newcommand{\essayinstructor}{Dr.\ Professor}                      % your professor's name
+\newcommand{\essayclass}{Basics 101}                               % your class name
+\newcommand{\essaydate}{1 January 1970}                            % date of essay
+
+\RequirePackage{ifpdf}
+\ifpdf
+  \documentclass[pdftex,12pt]{article}
+\else
+  \documentclass[12pt]{article}
+\fi
+
+\usepackage{style}
+
+\title{\essaytitle}
+\author{\essayauthor}
+\date{\essaydate}
+
+\ifpdf
+\hypersetup{
+  pdfinfo={
+    Title={\essaytitle},
+    Author={\essayauthor}
+  }
+}
+\fi
+
+\begin{document}
+\begin{mla}{\essayauthorfirst}{\essayauthorlast}{\essayinstructor}{\essayclass}{\essaydate}{\essaytitle}
+
+\input{essay.tex}
+
+\begin{workscited}
+  \input{workscited.tex}
+\end{workscited}
+
+\end{mla}
+\end{document}
