@@ -8,7 +8,7 @@
 - `make`
 - Some recent distribution of LaTeX (TeXLive, MacTeX, MiKTeX, etc)
 - [mla-paper](http://ctan.org/pkg/mla-paper)
-- [newtx](http://ctan.org/pkg/newtx)
+- [txfonts](http://ctan.org/pkg/txfonts)
 - [latexmk](http://ctan.org/pkg/latexmk)
 
 
