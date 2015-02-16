@@ -1,4 +1,4 @@
-FILES     := main.tex essay.tex workscited.tex style.sty
+FILES     := main.tex essay.tex workscited.tex style.sty config.sty
 CC        := latexmk -pdf
 NAME      := $(shell basename `pwd`)
 PDF       := dist/$(NAME).pdf
